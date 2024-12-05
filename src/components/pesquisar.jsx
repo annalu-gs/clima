@@ -1,4 +1,4 @@
-import lupa from '../assets/search.svg'
+import lupa from '/assets/search.svg'
 
 function Pesquisar(props){
   return(
