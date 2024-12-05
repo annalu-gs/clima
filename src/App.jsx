@@ -1,5 +1,3 @@
-// import React, { useState, useEffect} from 'react'
-import lupa from './assets/search.svg'
 import nuvem from './assets/nuvens.svg'
 import sol from './assets/el-sol.svg'
 import solEntreNuvens from './assets/solEnuvens.svg'
@@ -7,6 +5,7 @@ import chuva from './assets/chuva.svg'
 import luaEntreNuvens from './assets/luaNuvens.svg'
 import lua from './assets/lua.svg'
 import './App.css'
+import Pesquisar from './components/pesquisar.jsx'
 
 function App() {
   
@@ -101,7 +100,6 @@ async function iconClima(){
 }
 } 
 
-
   return (
     <>
      <div id="imagemBackground" style={{
@@ -116,10 +114,10 @@ async function iconClima(){
        height: '500px'
      }}></div>
 
-    <div id="pesquisar">
-      <input className='barraPesquisa' type="text" name="" id="barraPesquisa" placeholder='Pesquise uma cidade...'/>
-      <button id='btnPesquisar' onClick={MostrarDados}><img src={lupa} alt="Botão de pesquisa" /></button>
-    </div>
+    
+    <Pesquisar funcao={MostrarDados}/>
+    
+
     <div id='resultado'>
       
       <p id='cidade'><span></span></p>
@@ -128,7 +126,10 @@ async function iconClima(){
       <p><span id='temperatura'></span></p>
       <p id='teste'></p>
       <p id='explicacao'>Confira o clima de hoje em alguma cidade...</p>
-      <span><img src="https://media.giphy.com/media/JEBhwXKovOVV7C8VOI/giphy.gif?cid=790b76119saaqzs8rautjczyw8ouvyle6vw8o0n6s38qnedk&ep=v1_stickers_search&rid=giphy.gif&ct=s" id='iconAPI'/></span>
+      <span>
+        <img 
+          src="https://media.giphy.com/media/JEBhwXKovOVV7C8VOI/giphy.gif?cid=790b76119saaqzs8rautjczyw8ouvyle6vw8o0n6s38qnedk&ep=v1_stickers_search&rid=giphy.gif&ct=s" id='iconAPI'
+          alt='icone de clima'/></span>
       </div>
 
       <p><span id='tipo'></span></p>
