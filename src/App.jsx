@@ -1,7 +1,7 @@
 import nuvem from './assets/nuvens.svg'
 import sol from './assets/el-sol.svg'
 import solEntreNuvens from './assets/solEnuvens.svg'
-import chuva from './assets/chuva.svg'
+import chuva from '/src/assets/chuva.svg'
 import luaEntreNuvens from './assets/luaNuvens.svg'
 import lua from './assets/lua.svg'
 import './App.css'
@@ -103,7 +103,7 @@ async function iconClima(){
   return (
     <>
      <div id="imagemBackground" style={{
-       backgroundImage: `url('')`,
+       backgroundImage: `url("")`,
        backgroundRepeat: 'no-repeat',
        backgroundSize: '300px',
        backgroundPosition: 'bottom right',
